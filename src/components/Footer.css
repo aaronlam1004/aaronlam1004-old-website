@@ -1,0 +1,68 @@
+#icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#icons ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#icons li {
+    float: right;
+    margin-left: 5px;
+}
+
+#sprite-footer {
+    position: absolute;
+    width: 100%;
+}
+
+#sprite {
+    float: left;
+    height: 40px;
+    width: 40px;
+
+    animation: 0.2s run linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes run {
+    99% {
+        transform: translateX(200vh);
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+#message {
+    display: inline-block;
+
+    position: relative;
+    float: left;
+    left: -20px;
+    top: 10px;
+
+    animation: 0.6s appear 1;
+    animation-fill-mode: forwards;
+}
+
+#copyright {
+  float: right;
+  padding-right: 10px;
+
+  animation: 0.6s appear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(-2000px);
+    }
+    100% {
+        transform-origin: initial;
+    }
+}
