@@ -1,0 +1,72 @@
+#navbar {
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 0px;
+}
+
+#navbar li {
+    left: -200;
+    list-style: none;
+}
+
+.icolink {
+    margin-top: 4px;
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.icolink .border {
+    animation: unhighlight 1s;
+    animation-fill-mode: forwards;
+
+    position: relative;
+    top: -37px;
+    left: -3px;
+    z-index: -1;
+
+    padding: 1px;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 100%;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: white;
+}
+
+.icolink img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.icolink:hover > .border{
+    animation: highlight 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes highlight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+        background: linear-gradient(45deg, red, orange);
+    }
+}
+
+@keyframes unhighlight {
+    0% {
+        transform: rotate(180deg);
+        background: linear-gradient(45deg, red, orange);
+    }
+    100% {
+        transform: rotate(0deg);
+        background: transparent;
+    }
+}
