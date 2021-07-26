@@ -6,22 +6,39 @@
     padding-left: 10px;
     padding-right: 20px;
     margin-top: 0px;
+    background-color: rbga(255, 255, 255, 0.5);
 }
 
 #navbar li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: bold;
     left: -200;
     list-style: none;
+    margin-top: 10px;
+}
+
+#navbar li:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#icons {
+    position: absolute;
+    bottom: 40px;
 }
 
 .icolink {
-    margin-top: 4px;
-    width: 30px;
-    height: 30px;
+    margin-top: 3px;
+    width: 27px;
+    height: 27px;
     padding-left: 10px;
+    padding-top: 5px;
 }
 
 .icolink .border {
-    animation: unhighlight 1s;
+    visibility: hidden;
     animation-fill-mode: forwards;
 
     position: relative;
@@ -29,14 +46,12 @@
     left: -3px;
     z-index: -1;
 
-    padding: 1px;
-    width: 30px;
-    height: 30px;
-
+    /* background-color: red; */
     border-radius: 100%;
-    border-width: 2px;
-    border-style: dashed;
-    border-color: white;
+    width: 36px;
+    height: 36px;
+    /* border-style: solid; */
+    /* border-color: black; */
 }
 
 .icolink img {
@@ -53,20 +68,13 @@
 @keyframes highlight {
     0% {
         transform: rotate(0deg);
+        opacity: 0%;
+        background: linear-gradient(0deg, rgb(180, 94, 230), orange);
     }
     100% {
         transform: rotate(180deg);
-        background: linear-gradient(45deg, red, orange);
-    }
-}
-
-@keyframes unhighlight {
-    0% {
-        transform: rotate(180deg);
-        background: linear-gradient(45deg, red, orange);
-    }
-    100% {
-        transform: rotate(0deg);
-        background: transparent;
+        background: linear-gradient(45deg, rgb(180, 94, 230), orange);
+        opacity: 100%;
+        visibility: visible;
     }
 }

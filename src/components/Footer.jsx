@@ -1,21 +1,13 @@
 import React from 'react';
-import IconLink from './IconLink.js';
 
 import "./Footer.css";
-
-const sonic = require("../imgs/sonic.gif");
-
-const linkedin = require("../imgs/linkedin.png");
-const github = require("../imgs/github.png");
-const placeholder = require("../imgs/placeholder.jpg");
 
 class Footer extends React.Component {
     constructor(props) {
         super(props);
-        this.sprites = ["sonic"];
+        this.sprite = require("../imgs/sonic.gif").default;
         this.messages = ["California", "Irvine", "Long Beach"];
         this.state = {
-            sprite: `../imgs/${this.sprites[Math.floor(Math.random() * this.sprites.length)]}.gif`,
             message: this.messages[Math.floor(Math.random() * this.messages.length)]
         }
 
@@ -33,33 +25,25 @@ class Footer extends React.Component {
         
         sprite.style.visibility = "visible";
 
-        sprite.style.webkitAnimation = "none";
-        message.style.webkitAnimation = "none";
-        copyright.style.webkitAnimation = "none";
+        sprite.style.animation = "none";
+        message.style.animation = "none";
+        copyright.style.animation = "none";
 
         setTimeout(function() {
-            sprite.style.webkitAnimation = "";
-            message.style.webkitAnimation = "";
-            copyright.style.webkitAnimation = "";
-        }, 10);
+            sprite.style.animation = "";
+            message.style.animation = "";
+            copyright.style.animation = "";
+        }, 20);
         
     }
 
     render() {
         return(
-            <div>
-                <div id = "icons">
-                    <ul>
-                        <li><IconLink link = "https://www.linkedin.com/in/aaron-lam-93805b163/" image = {linkedin} size = "25" /></li>
-                        <li><IconLink link = "https://github.com/aaronlam1004" image = {github} size = "25" /></li>
-                    </ul>
-                </div>
-                <footer id = "sprite-footer">
-                    <img id = "sprite" src = {sonic} alt = {placeholder}></img>
-                    <span id = "message" onMouseEnter = {this.restartAnimation}>Made with <span role = "img" aria-label = "lightning">⚡</span> from <b>{this.state.message}</b></span>
-                    <span id = "copyright"> © Sonic the Hedeghog</span>
-                </footer>
-            </div>
+            <footer id="sprite-footer">
+                <img id="sprite" src={this.sprite} alt="Sonic" ></img>
+                <span id="message" onMouseEnter={this.restartAnimation}>Made with <span role = "img" aria-label = "lightning">⚡</span> from <b>{this.state.message}</b></span>
+                <span id="copyright"> © Sonic the Hedeghog</span>
+            </footer>
         );
     }
 }

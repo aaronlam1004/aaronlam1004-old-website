@@ -1,3 +1,56 @@
 .sectionBody {
     padding-left: 100px;
 }
+
+.sectionBody .lists {
+    display: inline-flex;
+}
+.sectionBody .lists ul:before {
+    content: attr(aria-label);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sectionBody .lists ul {
+    position: relative;
+    margin-top: 0px;
+    padding-left: 5px;
+}
+
+.sectionBody .lists ul li {
+    margin-top: 10px;
+}
+
+.sectionBody #title {
+    font-size: 100px;
+    -webkit-text-fill-color: black;
+}
+
+.sectionBody h1 {
+    background: linear-gradient(5deg, rgb(180, 94, 230), orange);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#experience .xp {
+    margin-left: 20px;
+    margin-right: 250px;
+}
+
+/* #experience h2 {
+    text-decoration: underline;
+} */
+
+#experience h2 span {
+    color: red;
+}
+
+#experience h3 span {
+    color: red;
+}
+
+#experience h3 {
+    margin-right: 20px;
+}
+

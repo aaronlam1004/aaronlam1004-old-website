@@ -1,22 +1,23 @@
 import React from 'react';
 
-// import Opening from './components/Opening.jsx';
-// import Header from './components/Header.js';
-// import Footer from './components/Footer.jsx';
-
 import Navbar from './components/Navbar.jsx';
 import About from './components/About.jsx';
-import Skills from './components/Technical.jsx';
+import Resume from './components/Resume.jsx';
+import Portfolio from './components/Portfolio.jsx';
+import Footer from './components/Footer.jsx';
+import Background from './components/Background.jsx';
 
 
 function App() {
     //<img src={logo} className="App-logo" alt="logo" />
     return (
         <div>
+            <Background/>
             <Navbar/>
             <About/>
-            <Skills/>
-            {/*<Footer />*/}
+            <Resume/>
+            <Portfolio/>
+            <Footer />
         </div>  
     );
 }
