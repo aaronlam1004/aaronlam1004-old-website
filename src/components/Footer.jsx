@@ -21,18 +21,18 @@ class Footer extends React.Component {
 
         const sprite = document.getElementById("sprite");
         const message = document.getElementById("message");
-        const copyright = document.getElementById("copyright");
+        // const copyright = document.getElementById("copyright");
         
         sprite.style.visibility = "visible";
 
         sprite.style.animation = "none";
         message.style.animation = "none";
-        copyright.style.animation = "none";
+        // copyright.style.animation = "none";
 
         setTimeout(function() {
             sprite.style.animation = "";
             message.style.animation = "";
-            copyright.style.animation = "";
+            // copyright.style.animation = "";
         }, 20);
         
     }
@@ -42,7 +42,7 @@ class Footer extends React.Component {
             <footer id="sprite-footer">
                 <img id="sprite" src={this.sprite} alt="Sonic" ></img>
                 <span id="message" onMouseEnter={this.restartAnimation}>Made with <span role = "img" aria-label = "lightning">⚡</span> from <b>{this.state.message}</b></span>
-                <span id="copyright"> © Sonic the Hedeghog</span>
+                {/* <span id="copyright"> © Sonic the Hedeghog</span> */}
             </footer>
         );
     }
