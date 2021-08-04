@@ -2,9 +2,16 @@
     padding-left: 100px;
 }
 
+.sectionBody #title {
+    font-size: 100px;
+    -webkit-text-fill-color: black;
+}
+
 .sectionBody .lists {
     display: inline-flex;
+    margin-right: 30px;
 }
+
 .sectionBody .lists ul:before {
     content: attr(aria-label);
     font-size: 20px;
@@ -13,18 +20,11 @@
 }
 
 .sectionBody .lists ul {
-    position: relative;
-    margin-top: 0px;
     padding-left: 5px;
 }
 
 .sectionBody .lists ul li {
     margin-top: 10px;
-}
-
-.sectionBody #title {
-    font-size: 100px;
-    -webkit-text-fill-color: black;
 }
 
 .sectionBody h1 {
@@ -35,7 +35,7 @@
 
 #experience .xp {
     margin-left: 20px;
-    margin-right: 250px;
+    /* margin-right: 250px; */
 }
 
 /* #experience h2 {

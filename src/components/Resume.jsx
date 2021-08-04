@@ -5,10 +5,6 @@ import Frameworks from './Frameworks.jsx';
 import Software from './Software.jsx';
 
 function Resume() {
-    var styles = {
-        top: "2px",
-        right: "-275px"
-    }
     return(
         <div className="sectionBody">
             <h1 id="skills">Technical Skills</h1>
@@ -16,7 +12,7 @@ function Resume() {
             <Frameworks/>
             <Software/>
             <div className="lists">
-                <ul aria-label="Other:" style={styles}>
+                <ul aria-label="Other:">
                     <li>Word</li>
                     <li>PowerPoint</li>
                     <li>Excel</li>
@@ -36,42 +32,48 @@ function Resume() {
 
                         <div className="xp">
                             <h3>Corporate Outreach Chair <span>(June 2020 - June 2021)</span></h3> 
-                            Lead the Corporate Outreach committee which informs comapnies about club events.
-                            Look to help build connections between UCI students and coporations. Work to get 
-                            sponsorships for club events and promote UCI students. Also worked as a liason between 
-                            the club and UCI's Division of Career Pathways to help members discover potential opportunities. 
+                            Lead the Corporate Outreach committee which works with companies to plan and promote club events.
                         </div>
 
                         <div className="xp">
                             <h3>Events Committee Member <span>(September 2018 - June 2020)</span></h3>
-                            Worked as a member of the Events Committee. Helped plan out events from hackathons, to
-                            game nights, and UCI's ICS Week to celebrate students in the school of Information and 
-                            Computer Science.
+                            Worked as a member of the Events Committee. Helped plan out different educational and fun events.
                         </div>
 
                     <h2>Middle Earth ACE Programmer <span>(September 2020 - June 2021)</span></h2> 
                     <div className="xp">
-                        Stands for Academic and Community Excellence Programmer.
-                        Worked for UCI's Middle Earth Student Housing with a team to plan events for residents 
-                        that promote academic and health wellness like game nights and resume workshops.
-                        Also created posters for these events with Canva.
+                        Stands for Academic and Community Excellence Programmer. Worked for UCI's 
+                        Middle Earth Student Housing <br/> with a team to plan events for 
+                        residents that promote academic and health wellness. Also created posters <br/> 
+                        for these events with Canva.
                     </div>
 
                     <h2>Information and Computer Science Tutor</h2> 
                         <div className="xp">
                             <h3>Principles of Systems Design <span>(January 2021 - March 2021)</span></h3>
+                            Worked in labs to help students in the Principles of Systems Design class (ICS 53). <br/>
+                            Explained system concepts like processes, memory, threads, etc. and helped debug C code.
                         </div>
                         <div className="xp">
                             <h3>Introduction to Programming <span>(March 2021 - June 2021)</span></h3>
+                            Worked in labs to help students in the Introduction to Programming class (ICS 31). <br/>
+                            Explained basic programming concepts like variables, loops, etc. and helped with debugging Python code.
                         </div>
                         
 
                     <h2>Learning Assistant</h2>
                         <div className="xp">
                             <h3>Discrete Mathematics <span>(January 2021 - March 2021)</span></h3>
+                                Helped with Discrete Mathematics class (I&C SCI 6D). Led breakout rooms to have 
+                                students solve given problems <br/> and helped answer questions about the 
+                                course material in lectures or office hours. Also helped caption lecture <br/>
+                                and discussion videos for students to watch.
                         </div>
                         <div className="xp">
                             <h3>Boolean Algebra <span>(March 2020 - June 2020)</span></h3>
+                                Helped with Boolean Algebra class (I&C SCI 6B). Led breakout rooms to have 
+                                students solve given problems <br/> and helped answer questions about the 
+                                course material in lectures, discussion, or office hours. 
                         </div>
             </div>
 

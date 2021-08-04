@@ -5,7 +5,7 @@
     margin-top: 10px;
     margin-right: 20px;
     width: 500px;
-    height: 300px;
+    height: 400px;
 }
 
 .portfolio-item h2 {
@@ -18,7 +18,7 @@
 
 .portfolio-item .border {
     width: 510px;
-    height: 310px;
+    height: 410px;
     border-radius: 2%;
     position: relative;
     z-index: -1;

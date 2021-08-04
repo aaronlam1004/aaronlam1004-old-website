@@ -2,13 +2,9 @@ import React from 'react';
 import SkillItem from './SkillItem';
 
 function Frameworks() {
-    var styles = {
-        top: "1.5px",
-        right: "-50px"
-    }
     return (
         <div className="lists">
-            <ul aria-label="Frameworks:" style={styles}>
+            <ul aria-label="Frameworks:">
             <SkillItem 
                 name="NumPy" 
                 src={require("../imgs/frameworks/numpy.png").default} 

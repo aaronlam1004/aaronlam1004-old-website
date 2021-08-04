@@ -2,13 +2,9 @@ import React from 'react';
 import SkillItem from './SkillItem';
 
 function Software() {
-    var styles = {
-        top: "2px",
-        right: "-175px"
-    }
     return (
         <div className="lists">
-            <ul aria-label="Software:" style={styles}>
+            <ul aria-label="Software:">
             <SkillItem 
                 name="Jupyter" 
                 src={require("../imgs/software/jupyter.png").default} 

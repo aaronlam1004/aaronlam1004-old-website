@@ -33,8 +33,13 @@ class PortfolioItem extends React.Component {
         `
 
         var pos = {
-            top: this.props.y,
-            left: this.props.x
+            top: this.props.descy,
+            left: this.props.descx,
+        };
+
+        var iprop = {
+            width: this.props.imgw,
+            height: this.props.imgh
         };
 
         var styles = {
@@ -52,7 +57,7 @@ class PortfolioItem extends React.Component {
                 <style children={ani} />
                 <h2>{this.props.title}</h2>
                 <a href={this.props.href} target="_blank" rel="noreferrer">
-                    <img alt={this.props.title} src={this.props.src}></img>
+                    <img style={iprop} alt={this.props.title} src={this.props.src}></img>
                     <span style={pos}>{this.props.desc}</span>
                 </a>
                 <div className="border" style={styles}></div>
