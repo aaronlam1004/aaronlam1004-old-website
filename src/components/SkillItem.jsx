@@ -18,34 +18,30 @@ class SkillItem extends React.Component {
         }));
     }
 
-
     render() {
         var color = {}
-
-        if (this.state.hovered) {
-            color.filter = `invert(1) sepia(1) brightness(0.6) saturate(3000%) hue-rotate(${-70 + parseInt(this.props.deg)}deg)`;
-        }
-
         if (this.props.color !== undefined) {
-            color.filter = "grayscale(0%)";
+            color.filter = "grayscale(100%)";
         }
-        
+        else if (this.props.theme === 1) {
+            color.filter = "invert(1)";
+        }
+
         if (this.state.hovered) {
-            return(
-                <li className="skill-item" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-                    <img alt={this.props.name} src={this.props.src} style={color}>
-                    </img> <span>{this.props.name}</span>
-                </li>
-            );
+            if (this.props.color !== undefined ) {
+                color.filter = "grayscale(0%)";
+            }
+            else {
+                color.filter = `invert(1) sepia(1) brightness(0.6) saturate(3000%) hue-rotate(${-70 + parseInt(this.props.deg)}deg)`;
+            }
         }
-        else {
-            return(
-                <li className="skill-item" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-                    <img alt={this.props.name} src={this.props.src}>
-                    </img> <span>{this.props.name}</span>
-                </li>
-            );
-        }
+
+        return(
+            <li className="skill-item" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+                <img alt={this.props.name} src={this.props.src} style={color}>
+                </img> <span>{this.props.name}</span>
+            </li>
+        );
     }
 }
 

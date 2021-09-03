@@ -6,6 +6,7 @@
     padding-left: 10px;
     margin-top: 0px;
     background-color: rbga(255, 255, 255, 0.5);
+    font-size: 20px;
 }
 
 #navbar li {
@@ -21,14 +22,6 @@
 #navbar li:hover {
     color: red;
     cursor: pointer;
-}
-
-#icons {
-    /*
-    padding-top: 250px;
-    position: absolute;
-    bottom: 50px;
-    */
 }
 
 .icolink {
@@ -58,6 +51,7 @@
     width: 30px;
     height: 30px;
     border-radius: 100%;
+    /*filter : invert(1);*/
 }
 
 .icolink:hover .border{ 
@@ -79,4 +73,47 @@
         background: linear-gradient(45deg, rgb(180, 94, 230), orange);
         opacity: 100%;
     }
+}
+
+#theme-switcher {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+#theme-toggle {
+    font-size: 20px;
+    color: white;
+    font-style: bold;
+    width: 70px;
+    height: 35px;
+    display: flex; 
+    justify-content: space-between;
+    padding-left: 10px;
+    align-items: center;
+    background-color: black;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#theme-toggle:before {
+    content: "";
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 40px;
+    position: absolute;
+    left: 15px;
+    transition: 0.5s all ease;
+}
+
+#theme-switcher:checked + #theme-toggle {
+    background-color: white;
+    color: black;
+    font-style: bold;
+}
+
+#theme-switcher:checked + #theme-toggle:before {
+    background-color: black;
+    transform: translateX(44px);
 }

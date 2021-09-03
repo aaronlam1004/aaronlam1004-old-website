@@ -6,11 +6,4 @@
     background: rgb(180, 94, 230);
     opacity: 0.8;
     border-radius: 100%;
-    animation: down 20s infinite;
-}
-
-@keyframes down {
-    100% {
-        transform: translateY(2800px);
-    }
 }

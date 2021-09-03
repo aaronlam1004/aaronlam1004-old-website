@@ -31,6 +31,10 @@ class PortfolioItem extends React.Component {
             }
         }
         `
+        var portfolioStyle = {}
+        if (this.props.theme) {
+            portfolioStyle["backgroundColor"] = "#1A1A1A";
+        }
 
         var pos = {
             top: this.props.descy,
@@ -53,8 +57,8 @@ class PortfolioItem extends React.Component {
         }
         
         return (
-            <div className="portfolio-item" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-                <style children={ani} />
+            <div className="portfolio-item" style={portfolioStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+                <style children={ani}/>
                 <h2>{this.props.title}</h2>
                 <a href={this.props.href} target="_blank" rel="noreferrer">
                     <img style={iprop} alt={this.props.title} src={this.props.src}></img>

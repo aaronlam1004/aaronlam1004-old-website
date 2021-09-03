@@ -1,5 +1,5 @@
 import React from 'react';
-import './CodeTitle.css'
+import './CodeTitle.css';
 
 class CodeTitle extends React.Component {
 

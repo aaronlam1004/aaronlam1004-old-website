@@ -7,9 +7,9 @@ import Portfolio from './components/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
 import Background from './components/Background.jsx';
 
-
 function App() {
     //<img src={logo} className="App-logo" alt="logo" />
+
     return (
         <div>
             <Background/>
@@ -17,7 +17,7 @@ function App() {
             <About/>
             <Resume/>
             <Portfolio/>
-            <Footer />
+            <Footer/>
         </div>  
     );
 }

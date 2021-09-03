@@ -1,10 +1,11 @@
 .sectionBody {
-    padding-left: 100px;
+    padding-left: 150px;
 }
 
-.sectionBody #title {
+#title {
     font-size: 100px;
     -webkit-text-fill-color: black;
+    margin-bottom: 10px;
 }
 
 .sectionBody .lists {
