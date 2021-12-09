@@ -26,6 +26,7 @@ class Portfolio extends React.Component {
 
     render() {
         this.portfolio[0] = <PortfolioItem
+                                key="port-0"
                                 title="This website"
                                 href=""
                                 src={require("../imgs/portfolio/website.PNG").default}
@@ -39,6 +40,7 @@ class Portfolio extends React.Component {
                                 theme={this.state.mode}
                             />
         this.portfolio[1] = <PortfolioItem
+                                key="port-1"
                                 title="VR Aliens"
                                 href="https://www.youtube.com/watch?v=nDEe1d46kAY&list=PLYPlBKK12vcbsQKN0endzeu6f4Zjm_izG&index=1"
                                 src={require("../imgs/portfolio/vr.png").default}
@@ -53,6 +55,7 @@ class Portfolio extends React.Component {
                                 theme={this.state.mode}
                             />
         this.portfolio[2] = <PortfolioItem
+                                key="port-2"
                                 title="Checkers"
                                 href="https://github.com/aaronlam1004/checkers"
                                 src={require("../imgs/portfolio/checkers.PNG").default}
@@ -60,7 +63,7 @@ class Portfolio extends React.Component {
                                 imgw="400px"
                                 imgh="300px"
                                 descx="165px"
-                                descy="-225px"
+                                descy="-250px"
                                 borderx="-5px"
                                 bordery="-550px"
                                 theme={this.state.mode}

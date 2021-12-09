@@ -49,7 +49,7 @@ class Background extends React.Component {
             );
         }
         else {
-            console.log("Rendering nothing!!");
+            // console.log("Rendering nothing!!");
             return (<div></div>);
         }
     }

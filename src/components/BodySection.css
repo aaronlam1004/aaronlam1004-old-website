@@ -3,9 +3,15 @@
 }
 
 #title {
+    display: inline-flex;
     font-size: 100px;
     -webkit-text-fill-color: black;
     margin-bottom: 10px;
+}
+
+#title-img {
+    width: 150px;
+    height: 150px;
 }
 
 .sectionBody .lists {

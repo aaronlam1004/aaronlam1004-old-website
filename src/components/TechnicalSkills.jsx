@@ -3,9 +3,6 @@ import './BodySection.css';
 import globals from './globals';
 import skills from "./Skills";
 import SkillItem from "./SkillItem.jsx";
-// import ProgrammingLanguages from './ProgrammingLanguages.jsx';
-// import Frameworks from './Frameworks.jsx';
-// import Software from './Software.jsx';
 
 const progInfo = skills["Programming Languages"];
 const pLength = progInfo.length;
@@ -16,8 +13,10 @@ const fLength = frameInfo.length;
 const softInfo = skills["Software"];
 const sLength = softInfo.length;
 
+const miscInfo = skills["Misc"];
+const mLength = miscInfo.length;
 
-class Resume extends React.Component {
+class TechnicalSkills extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,6 +27,7 @@ class Resume extends React.Component {
         this.languages = [];
         this.frameworks = [];
         this.software = [];
+        this.misc = [];
     }
 
     componentDidMount() {
@@ -38,6 +38,7 @@ class Resume extends React.Component {
         this.languages = [];
         this.frameworks = [];
         this.software = [];
+        this.misc = [];
         this.setState(prevState => ({
             mode: (globals.mode === 0) ? 1 : 0
         }));
@@ -47,7 +48,7 @@ class Resume extends React.Component {
     render() {
         var i = 0;
 
-        while (i < pLength || i < fLength || i < sLength) {
+        while (i < pLength || i < fLength || i < sLength || i < mLength) {
             if (i < pLength) {
                 var p = progInfo[i];
                 this.languages.push(<SkillItem key={`lang-${i}`} name={p["name"]} src={p["src"]} deg={p["deg"]} color={p["color"]} theme={this.state.mode}/>);    
@@ -60,6 +61,10 @@ class Resume extends React.Component {
                 var s = softInfo[i];
                 this.software.push(<SkillItem key={`soft-${i}`} name={s["name"]} src={s["src"]} deg={s["deg"]} color={s["color"]} theme={this.state.mode}/>);    
             }
+            if (i < mLength) {
+                var m = miscInfo[i];
+                this.misc.push(<SkillItem key={`misc-${i}`} name={m["name"]} src={m["src"]} deg={m["deg"]} color={m["color"]} theme={this.state.mode}/>);
+            }
             i++;
         }
 
@@ -68,30 +73,22 @@ class Resume extends React.Component {
                 <h1 id="skills">Technical Skills</h1>
                 <div className="lists">
                     <ul aria-label="Programming Languages:">
-                    {this.languages}
+                        {this.languages}
                     </ul>
                 </div>
                 <div className="lists">
                     <ul aria-label="Frameworks:">
-                    {this.frameworks}
+                        {this.frameworks}
                     </ul>
                 </div>
                 <div className="lists">
                     <ul aria-label="Software:">
-                    {this.software}
+                        {this.software}
                     </ul>
                 </div>
                 <div className="lists">
-                    <ul aria-label="Other:">
-                        <li>Word</li>
-                        <li>PowerPoint</li>
-                        <li>Excel</li>
-                        <li>GIMP</li>
-                        <li>Photoshop</li>
-                        <li>Canva</li>
-                        <li>Premiere Pro</li>
-                        <li>Olive Editor</li>
-                        <li>Blender</li>
+                    <ul aria-label="Misc:">
+                        {this.misc}
                     </ul>
                 </div>
                 <div id="experience">
@@ -154,4 +151,4 @@ class Resume extends React.Component {
     }
 }
 
-export default Resume;
+export default TechnicalSkills;

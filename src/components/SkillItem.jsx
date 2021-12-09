@@ -20,8 +20,11 @@ class SkillItem extends React.Component {
 
     render() {
         var color = {}
-        if (this.props.color !== undefined) {
-            color.filter = "grayscale(100%)";
+        if (this.props.color !== undefined && this.props.theme === 0) {
+            color.filter = "grayscale(100%) brightness(20%)";
+        }
+        else if (this.props.color !== undefined && this.props.theme === 1) {
+            color.filter = "grayscale(100%) brightness(120%)";
         }
         else if (this.props.theme === 1) {
             color.filter = "invert(1)";
